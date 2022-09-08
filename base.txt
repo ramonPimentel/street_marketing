@@ -1,0 +1,9 @@
+aiohttp[speedups]==3.8.1
+fastapi==0.75.2
+fastapi-utils==0.2.1
+python-dotenv==0.19.2
+uvicorn[standard]==0.17.5
+ipython==8.2.0
+pymongo==3.12.3
+fastapi_utils==0.2.1
+mongodb-migrations==1.1.1

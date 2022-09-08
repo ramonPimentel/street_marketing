@@ -1,0 +1,23 @@
+version: "3.2"
+
+services:
+  server:
+    build:
+      context: ./
+    depends_on:
+      - mongo
+    restart: always
+    command: make run
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./:/src/
+
+  mongo:
+    image: mongo:4.2.7-bionic
+    hostname: mongo
+    ports:
+      - 27017:27017
+    command: mongod
+    expose:
+      - 27017
