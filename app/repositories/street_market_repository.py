@@ -1,5 +1,6 @@
 
-from repositories.base_repository import BaseRepository
+from app.models.street_marketing_model import StreetMarketing
+from app.repositories.base_repository import BaseRepository
 
 class StreetMarketRepository(BaseRepository):
   def __init__(self):
@@ -8,4 +9,6 @@ class StreetMarketRepository(BaseRepository):
   
   def find(self):
     result = self.collection.find_one({})
-    return result 
+    if result:
+      return StreetMarketing(**result)
+

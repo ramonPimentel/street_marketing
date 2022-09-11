@@ -8,5 +8,4 @@ async def root():
   repository = StreetMarketRepository()
   repository.add({'teste': 'Ramon'})
   result = repository.find()
-  del result['_id']
   return result

@@ -12,4 +12,4 @@ RUN pip install --upgrade pip \
     pip install setuptools wheel --no-cache-dir --upgrade \
     pip install --no-cache-dir -r ./base.txt
   
-EXPOSE 8000
+EXPOSE 9000
