@@ -16,4 +16,9 @@ class StreetMarketRepository(BaseRepository):
     result = self.collection.find_one({})
     if result:
       return StreetMarketing(**result)
+    
+  def search(self, query):
+    result = self.collection.find_one({ "nome_feira": { '$eq' : query } })
+    if result:
+      return StreetMarketing(**result)
 
