@@ -7,6 +7,11 @@ class StreetMarketRepository(BaseRepository):
     db = self.get_db()
     self.collection = db.street_market
   
+  def find_by_code(self, code):
+    result = self.collection.find_one({"codigo": code})
+    if result:
+      return StreetMarketing(**result)
+
   def find(self):
     result = self.collection.find_one({})
     if result:

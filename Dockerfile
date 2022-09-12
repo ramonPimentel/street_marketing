@@ -11,5 +11,7 @@ ADD . .
 RUN pip install --upgrade pip \
     pip install setuptools wheel --no-cache-dir --upgrade \
     pip install --no-cache-dir -r ./base.txt
-  
+
+RUN export PYTHONPATH=$PWD
+
 EXPOSE 9000
