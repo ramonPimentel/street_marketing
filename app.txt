@@ -1,0 +1,138 @@
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [91]
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [9]
+uvicorn.error - INFO - Started server process [23]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [23]
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 26, in create
+    CreateStreetMarketing(street_marketing).execute()
+  File "/src/./app/use_cases/create_street_marketing.py", line 13, in execute
+    self.check_exists()
+  File "/src/./app/use_cases/create_street_marketing.py", line 17, in check_exists
+    self._logger.info("Check street marketing exists")
+  File "/src/./app/utils/logger.py", line 13, in info
+    return self._logger.info(f"{self._base_msg} {msg}")
+AttributeError: 'NoneType' object has no attribute 'info'
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [51]
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [55]
+uvicorn.error - INFO - Started server process [75]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [75]
+uvicorn.error - INFO - Started server process [97]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [97]
+uvicorn.error - INFO - Started server process [101]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 26, in create
+    CreateStreetMarketing(street_marketing).execute()
+  File "/src/./app/use_cases/create_street_marketing.py", line 13, in execute
+    self.check_exists()
+  File "/src/./app/use_cases/create_street_marketing.py", line 17, in check_exists
+    self._logger.info("Check street marketing exists")
+  File "/src/./app/utils/logger.py", line 24, in info
+    return self._logger.info(f"{self._base_msg} {msg}")
+AttributeError: 'Logger' object has no attribute '_base_msg'
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [101]
+uvicorn.error - INFO - Started server process [105]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+CreateStreetMarketing - INFO - Check street marketing exists
+CreateStreetMarketing - INFO - Check street marketing exists
+CreateStreetMarketing - INFO - Check street marketing exists
+CreateStreetMarketing - INFO - Check street marketing exists
+CreateStreetMarketing - INFO - Check street marketing exists
+CreateStreetMarketing - INFO - Check street marketing exists
+CreateStreetMarketing - INFO - Check street marketing exists
+CreateStreetMarketing - INFO - Check street marketing exists
+CreateStreetMarketing - INFO - Check street marketing exists
