@@ -1,0 +1,13 @@
+[run]
+omit =
+    */tests/*
+    */migrations/*
+    app/models/fields.py
+    **/**/__init__.py
+    app/configs/mongo.py
+
+[report]
+exclude_lines = 
+    pragma: no cover
+    if TYPE_CHECKING:
+    if health_check_only:
