@@ -14,4 +14,4 @@ clean:
 	@rm -f *.log
 
 coverage: clean
-	@py.test --cov=app --cov-report=term-missing --cov-report=xml --cov-fail-under=90 ./tests/
+	@py.test --cov=app --cov-report=term-missing --cov-report=xml --cov-fail-under=80 ./tests/
