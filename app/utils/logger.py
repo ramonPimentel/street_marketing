@@ -1,9 +1,6 @@
 import logging
 
-logging.basicConfig(
-  filename='app.txt',
-  format='%(name)s - %(levelname)s - %(message)s'
-)
+
 
 class Logger():
   def __init__(self, scope=None):   
@@ -14,8 +11,8 @@ class Logger():
     log = logging.getLogger(name)
 
     logging.basicConfig(
-      format="%(levelname)s %(asctime)s %(funcName)s %(lineno)d %(message)s",
-      filename='app.txt'
+      filename='logger.txt',
+      format='%(name)s - %(levelname)s - %(message)s'
     )
 
     log.setLevel(logging.DEBUG)
