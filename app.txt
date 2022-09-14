@@ -1,11 +1,345 @@
+SearchStreetMarketing - INFO - start search district: teste
+SearchStreetMarketing - INFO - start search district: VILA FORMOSA
+SearchStreetMarketing - INFO - start search district: VILA FORMOSA
 uvicorn.error - INFO - Shutting down
 uvicorn.error - INFO - Waiting for application shutdown.
 uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [91]
+uvicorn.error - INFO - Finished server process [50]
+uvicorn.error - INFO - Started server process [62]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search district: VILA FORMOSA
+SearchStreetMarketing - INFO - start search district: VILA FORMOSA
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [62]
+uvicorn.error - INFO - Started server process [68]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [68]
+uvicorn.error - INFO - Started server process [70]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [70]
+uvicorn.error - INFO - Started server process [76]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [76]
+uvicorn.error - INFO - Started server process [84]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 19, in index
+    return json.loads(json_util.dumps(result))
+  File "/usr/local/lib/python3.8/site-packages/bson/json_util.py", line 412, in dumps
+    return json.dumps(_json_convert(obj, json_options), *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/bson/json_util.py", line 450, in _json_convert
+    return list((_json_convert(v, json_options) for v in obj))
+  File "/usr/local/lib/python3.8/site-packages/bson/json_util.py", line 450, in <genexpr>
+    return list((_json_convert(v, json_options) for v in obj))
+  File "/src/./app/repositories/street_market_repository.py", line 23, in <lambda>
+    return map(lambda x : StreetMarketing(**x), result)
+TypeError: ModelMetaclass object argument after ** must be a mapping, not str
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [84]
+uvicorn.error - INFO - Started server process [88]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 19, in index
+    return json.loads(json_util.dumps(result))
+  File "/usr/local/lib/python3.8/site-packages/bson/json_util.py", line 412, in dumps
+    return json.dumps(_json_convert(obj, json_options), *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/bson/json_util.py", line 450, in _json_convert
+    return list((_json_convert(v, json_options) for v in obj))
+  File "/usr/local/lib/python3.8/site-packages/bson/json_util.py", line 450, in <genexpr>
+    return list((_json_convert(v, json_options) for v in obj))
+  File "/src/./app/repositories/street_market_repository.py", line 23, in <lambda>
+    return map(lambda x : StreetMarketing(**x), result)
+TypeError: ModelMetaclass object argument after ** must be a mapping, not str
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 19, in index
+    return json.loads(json_util.dumps(result))
+  File "/usr/local/lib/python3.8/site-packages/bson/json_util.py", line 412, in dumps
+    return json.dumps(_json_convert(obj, json_options), *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/bson/json_util.py", line 450, in _json_convert
+    return list((_json_convert(v, json_options) for v in obj))
+  File "/usr/local/lib/python3.8/site-packages/bson/json_util.py", line 450, in <genexpr>
+    return list((_json_convert(v, json_options) for v in obj))
+  File "/src/./app/repositories/street_market_repository.py", line 23, in <lambda>
+    return map(lambda x : StreetMarketing(**x), result)
+TypeError: ModelMetaclass object argument after ** must be a mapping, not str
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [88]
+uvicorn.error - INFO - Started server process [94]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [94]
+uvicorn.error - INFO - Started server process [98]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [98]
+uvicorn.error - INFO - Started server process [102]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [102]
+uvicorn.error - INFO - Started server process [106]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [106]
+uvicorn.error - INFO - Started server process [110]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Started server process [16]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Started server process [9]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 18, in index
+    result = SearchStreetMarketing(district=district).execute()
+TypeError: __init__() missing 1 required positional argument: 'regiao5'
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 18, in index
+    result = SearchStreetMarketing(district=district).execute()
+TypeError: __init__() missing 1 required positional argument: 'regiao5'
 uvicorn.error - INFO - Shutting down
 uvicorn.error - INFO - Waiting for application shutdown.
 uvicorn.error - INFO - Application shutdown complete.
 uvicorn.error - INFO - Finished server process [9]
+uvicorn.error - INFO - Started server process [11]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [11]
+uvicorn.error - INFO - Started server process [15]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [15]
+uvicorn.error - INFO - Started server process [21]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [21]
 uvicorn.error - INFO - Started server process [23]
 uvicorn.error - INFO - Waiting for application startup.
 uvicorn.error - INFO - Application startup complete.
@@ -13,6 +347,11 @@ uvicorn.error - INFO - Shutting down
 uvicorn.error - INFO - Waiting for application shutdown.
 uvicorn.error - INFO - Application shutdown complete.
 uvicorn.error - INFO - Finished server process [23]
+uvicorn.error - INFO - Started server process [27]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
 uvicorn.error - ERROR - Exception in ASGI application
 Traceback (most recent call last):
   File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
@@ -45,40 +384,153 @@ Traceback (most recent call last):
     raw_response = await run_endpoint_function(
   File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
     return await dependant.call(**values)
-  File "/src/./main.py", line 26, in create
-    CreateStreetMarketing(street_marketing).execute()
-  File "/src/./app/use_cases/create_street_marketing.py", line 13, in execute
-    self.check_exists()
-  File "/src/./app/use_cases/create_street_marketing.py", line 17, in check_exists
-    self._logger.info("Check street marketing exists")
-  File "/src/./app/utils/logger.py", line 13, in info
-    return self._logger.info(f"{self._base_msg} {msg}")
-AttributeError: 'NoneType' object has no attribute 'info'
+  File "/src/./main.py", line 18, in index
+    result = SearchStreetMarketing(district=district).execute()
+  File "/src/./app/use_cases/search_street_marketing.py", line 20, in execute
+    return self.repository.find(query=query)
+  File "/src/./app/repositories/street_market_repository.py", line 24, in find
+    paginator = Paginate(
+TypeError: __init__() missing 2 required positional arguments: 'ordering_case' and 'ordering_field'
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [27]
+uvicorn.error - INFO - Started server process [31]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [31]
+uvicorn.error - INFO - Started server process [35]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 18, in index
+    result = SearchStreetMarketing(district=district).execute()
+  File "/src/./app/use_cases/search_street_marketing.py", line 20, in execute
+    return self.repository.find(query=query)
+  File "/src/./app/repositories/street_market_repository.py", line 35, in find
+    print("Response: ", paginator.response)
+AttributeError: 'generator' object has no attribute 'response'
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 18, in index
+    result = SearchStreetMarketing(district=district).execute()
+  File "/src/./app/use_cases/search_street_marketing.py", line 20, in execute
+    return self.repository.find(query=query)
+  File "/src/./app/repositories/street_market_repository.py", line 35, in find
+    print("Response: ", paginator.response)
+AttributeError: 'generator' object has no attribute 'response'
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [35]
+uvicorn.error - INFO - Started server process [41]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [41]
+uvicorn.error - INFO - Started server process [47]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [47]
+uvicorn.error - INFO - Started server process [51]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
 uvicorn.error - INFO - Shutting down
 uvicorn.error - INFO - Waiting for application shutdown.
 uvicorn.error - INFO - Application shutdown complete.
 uvicorn.error - INFO - Finished server process [51]
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [55]
-uvicorn.error - INFO - Started server process [75]
+uvicorn.error - INFO - Started server process [59]
 uvicorn.error - INFO - Waiting for application startup.
 uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [75]
-uvicorn.error - INFO - Started server process [97]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [97]
-uvicorn.error - INFO - Started server process [101]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
 uvicorn.error - ERROR - Exception in ASGI application
 Traceback (most recent call last):
   File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
@@ -111,35 +563,1796 @@ Traceback (most recent call last):
     raw_response = await run_endpoint_function(
   File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
     return await dependant.call(**values)
-  File "/src/./main.py", line 26, in create
-    CreateStreetMarketing(street_marketing).execute()
-  File "/src/./app/use_cases/create_street_marketing.py", line 13, in execute
-    self.check_exists()
-  File "/src/./app/use_cases/create_street_marketing.py", line 17, in check_exists
-    self._logger.info("Check street marketing exists")
-  File "/src/./app/utils/logger.py", line 24, in info
-    return self._logger.info(f"{self._base_msg} {msg}")
-AttributeError: 'Logger' object has no attribute '_base_msg'
+  File "/src/./main.py", line 27, in index
+    return json.loads(result_json)
+  File "/usr/local/lib/python3.8/json/__init__.py", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not dict
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 27, in index
+    return json.loads(result_json)
+  File "/usr/local/lib/python3.8/json/__init__.py", line 341, in loads
+    raise TypeError(f'the JSON object must be str, bytes or bytearray, '
+TypeError: the JSON object must be str, bytes or bytearray, not dict
 uvicorn.error - INFO - Shutting down
 uvicorn.error - INFO - Waiting for application shutdown.
 uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [101]
-uvicorn.error - INFO - Started server process [105]
+uvicorn.error - INFO - Finished server process [59]
+uvicorn.error - INFO - Started server process [65]
 uvicorn.error - INFO - Waiting for application startup.
 uvicorn.error - INFO - Application startup complete.
-CreateStreetMarketing - INFO - Check street marketing exists
-CreateStreetMarketing - INFO - Check street marketing exists
-CreateStreetMarketing - INFO - Check street marketing exists
-CreateStreetMarketing - INFO - Check street marketing exists
-CreateStreetMarketing - INFO - Check street marketing exists
-CreateStreetMarketing - INFO - Check street marketing exists
-CreateStreetMarketing - INFO - Check street marketing exists
-CreateStreetMarketing - INFO - Check street marketing exists
-CreateStreetMarketing - INFO - Check street marketing exists
-uvicorn.error - INFO - Started server process [9]
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 137, in jsonable_encoder
+    data = dict(obj)
+TypeError: 'ObjectId' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 141, in jsonable_encoder
+    data = vars(obj)
+TypeError: vars() argument must have __dict__ attribute
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 235, in app
+    response_data = await serialize_response(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 149, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 115, in jsonable_encoder
+    jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 144, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [TypeError("'ObjectId' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 137, in jsonable_encoder
+    data = dict(obj)
+TypeError: 'ObjectId' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 141, in jsonable_encoder
+    data = vars(obj)
+TypeError: vars() argument must have __dict__ attribute
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 235, in app
+    response_data = await serialize_response(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 149, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 115, in jsonable_encoder
+    jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 144, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [TypeError("'ObjectId' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 137, in jsonable_encoder
+    data = dict(obj)
+TypeError: 'ObjectId' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 141, in jsonable_encoder
+    data = vars(obj)
+TypeError: vars() argument must have __dict__ attribute
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 235, in app
+    response_data = await serialize_response(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 149, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 115, in jsonable_encoder
+    jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 144, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [TypeError("'ObjectId' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 137, in jsonable_encoder
+    data = dict(obj)
+TypeError: 'ObjectId' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 141, in jsonable_encoder
+    data = vars(obj)
+TypeError: vars() argument must have __dict__ attribute
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 235, in app
+    response_data = await serialize_response(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 149, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 115, in jsonable_encoder
+    jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 144, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [TypeError("'ObjectId' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 137, in jsonable_encoder
+    data = dict(obj)
+TypeError: 'ObjectId' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 141, in jsonable_encoder
+    data = vars(obj)
+TypeError: vars() argument must have __dict__ attribute
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 235, in app
+    response_data = await serialize_response(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 149, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 115, in jsonable_encoder
+    jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 144, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [TypeError("'ObjectId' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [65]
+uvicorn.error - INFO - Started server process [77]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [77]
+uvicorn.error - INFO - Started server process [81]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [81]
+uvicorn.error - INFO - Started server process [87]
 uvicorn.error - INFO - Waiting for application startup.
 uvicorn.error - INFO - Application startup complete.
 uvicorn.error - INFO - Shutting down
 uvicorn.error - INFO - Waiting for application shutdown.
 uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [9]
+uvicorn.error - INFO - Finished server process [87]
+uvicorn.error - INFO - Started server process [89]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    'response': json.loads(json_util.dumps(result.response)),
+AttributeError: 'generator' object has no attribute 'response'
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    'response': json.loads(json_util.dumps(result.response)),
+AttributeError: 'generator' object has no attribute 'response'
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    'response': json.loads(json_util.dumps(result.response)),
+AttributeError: 'generator' object has no attribute 'response'
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [89]
+uvicorn.error - INFO - Started server process [99]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    'response': json.loads(json_util.dumps(result.response)),
+AttributeError: 'generator' object has no attribute 'response'
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [99]
+uvicorn.error - INFO - Started server process [103]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    'response': result.response,
+AttributeError: 'generator' object has no attribute 'response'
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [103]
+uvicorn.error - INFO - Started server process [107]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    'response': result.response,
+AttributeError: 'generator' object has no attribute 'response'
+uvicorn.error - INFO - Started server process [10]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [10]
+uvicorn.error - INFO - Started server process [12]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [12]
+uvicorn.error - INFO - Started server process [14]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [14]
+uvicorn.error - INFO - Started server process [16]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [16]
+uvicorn.error - INFO - Started server process [18]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [18]
+uvicorn.error - INFO - Started server process [20]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [20]
+uvicorn.error - INFO - Started server process [22]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [22]
+uvicorn.error - INFO - Started server process [24]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [24]
+uvicorn.error - INFO - Started server process [26]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [26]
+uvicorn.error - INFO - Started server process [28]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [28]
+uvicorn.error - INFO - Started server process [30]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [30]
+uvicorn.error - INFO - Started server process [32]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    'response': result.response,
+AttributeError: 'generator' object has no attribute 'response'
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [32]
+uvicorn.error - INFO - Started server process [36]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [36]
+uvicorn.error - INFO - Started server process [38]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 137, in jsonable_encoder
+    data = dict(obj)
+TypeError: 'ObjectId' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 141, in jsonable_encoder
+    data = vars(obj)
+TypeError: vars() argument must have __dict__ attribute
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 235, in app
+    response_data = await serialize_response(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 149, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 115, in jsonable_encoder
+    jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 144, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [TypeError("'ObjectId' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [38]
+uvicorn.error - INFO - Started server process [42]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [42]
+uvicorn.error - INFO - Started server process [44]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 137, in jsonable_encoder
+    data = dict(obj)
+TypeError: 'ObjectId' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 141, in jsonable_encoder
+    data = vars(obj)
+TypeError: vars() argument must have __dict__ attribute
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 235, in app
+    response_data = await serialize_response(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 149, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 115, in jsonable_encoder
+    jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 144, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [TypeError("'ObjectId' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 137, in jsonable_encoder
+    data = dict(obj)
+TypeError: 'ObjectId' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 141, in jsonable_encoder
+    data = vars(obj)
+TypeError: vars() argument must have __dict__ attribute
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 235, in app
+    response_data = await serialize_response(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 149, in serialize_response
+    return jsonable_encoder(response_content)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 115, in jsonable_encoder
+    jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
+    encoded_value = jsonable_encoder(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 144, in jsonable_encoder
+    raise ValueError(errors)
+ValueError: [TypeError("'ObjectId' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [44]
+uvicorn.error - INFO - Started server process [50]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA FORMOSA'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [50]
+uvicorn.error - INFO - Started server process [58]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [58]
+uvicorn.error - INFO - Started server process [76]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [76]
+uvicorn.error - INFO - Started server process [86]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [86]
+uvicorn.error - INFO - Started server process [96]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [96]
+uvicorn.error - INFO - Started server process [100]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [100]
+uvicorn.error - INFO - Started server process [102]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [102]
+uvicorn.error - INFO - Started server process [106]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [106]
+uvicorn.error - INFO - Started server process [124]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [124]
+uvicorn.error - INFO - Started server process [136]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Started server process [10]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    result = SearchStreetMarketing(
+  File "/src/./app/use_cases/search_street_marketing.py", line 27, in execute
+    return self.repository.search(
+  File "/src/./app/repositories/street_market_repository.py", line 28, in search
+    paginator = Paginate(
+  File "/usr/local/lib/python3.8/site-packages/mongonator/paginator.py", line 103, in paginate
+    response = self.paginate_one_batch()
+  File "/usr/local/lib/python3.8/site-packages/mongonator/paginator.py", line 44, in paginate_one_batch
+    self.build_query()
+  File "/usr/local/lib/python3.8/site-packages/mongonator/query.py", line 61, in build_query
+    self._build_internal_structures(self._next_page, True)
+  File "/usr/local/lib/python3.8/site-packages/mongonator/query.py", line 50, in _build_internal_structures
+    paginated_field, _id = self.decode(paginator_pointer)
+  File "/usr/local/lib/python3.8/site-packages/mongonator/pointermixin.py", line 13, in decode
+    return pickle.loads(base64.b64decode(encoded_pointer))
+  File "/usr/local/lib/python3.8/base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Invalid base64-encoded string: number of data characters (85) cannot be 1 more than a multiple of 4
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [10]
+uvicorn.error - INFO - Started server process [20]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [20]
+uvicorn.error - INFO - Started server process [22]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    result = SearchStreetMarketing(
+  File "/src/./app/use_cases/search_street_marketing.py", line 27, in execute
+    return self.repository.search(
+  File "/src/./app/repositories/street_market_repository.py", line 28, in search
+    paginator = Paginate(
+  File "/usr/local/lib/python3.8/site-packages/mongonator/paginator.py", line 103, in paginate
+    response = self.paginate_one_batch()
+  File "/usr/local/lib/python3.8/site-packages/mongonator/paginator.py", line 44, in paginate_one_batch
+    self.build_query()
+  File "/usr/local/lib/python3.8/site-packages/mongonator/query.py", line 61, in build_query
+    self._build_internal_structures(self._next_page, True)
+  File "/usr/local/lib/python3.8/site-packages/mongonator/query.py", line 50, in _build_internal_structures
+    paginated_field, _id = self.decode(paginator_pointer)
+  File "/usr/local/lib/python3.8/site-packages/mongonator/pointermixin.py", line 13, in decode
+    return pickle.loads(base64.b64decode(encoded_pointer))
+  File "/usr/local/lib/python3.8/base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Invalid base64-encoded string: number of data characters (85) cannot be 1 more than a multiple of 4
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    result = SearchStreetMarketing(
+  File "/src/./app/use_cases/search_street_marketing.py", line 27, in execute
+    return self.repository.search(
+  File "/src/./app/repositories/street_market_repository.py", line 28, in search
+    paginator = Paginate(
+  File "/usr/local/lib/python3.8/site-packages/mongonator/paginator.py", line 103, in paginate
+    response = self.paginate_one_batch()
+  File "/usr/local/lib/python3.8/site-packages/mongonator/paginator.py", line 44, in paginate_one_batch
+    self.build_query()
+  File "/usr/local/lib/python3.8/site-packages/mongonator/query.py", line 61, in build_query
+    self._build_internal_structures(self._next_page, True)
+  File "/usr/local/lib/python3.8/site-packages/mongonator/query.py", line 50, in _build_internal_structures
+    paginated_field, _id = self.decode(paginator_pointer)
+  File "/usr/local/lib/python3.8/site-packages/mongonator/pointermixin.py", line 13, in decode
+    return pickle.loads(base64.b64decode(encoded_pointer))
+  File "/usr/local/lib/python3.8/base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Invalid base64-encoded string: number of data characters (85) cannot be 1 more than a multiple of 4
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    result = SearchStreetMarketing(
+  File "/src/./app/use_cases/search_street_marketing.py", line 27, in execute
+    return self.repository.search(
+  File "/src/./app/repositories/street_market_repository.py", line 28, in search
+    paginator = Paginate(
+  File "/usr/local/lib/python3.8/site-packages/mongonator/paginator.py", line 103, in paginate
+    response = self.paginate_one_batch()
+  File "/usr/local/lib/python3.8/site-packages/mongonator/paginator.py", line 44, in paginate_one_batch
+    self.build_query()
+  File "/usr/local/lib/python3.8/site-packages/mongonator/query.py", line 61, in build_query
+    self._build_internal_structures(self._next_page, True)
+  File "/usr/local/lib/python3.8/site-packages/mongonator/query.py", line 50, in _build_internal_structures
+    paginated_field, _id = self.decode(paginator_pointer)
+  File "/usr/local/lib/python3.8/site-packages/mongonator/pointermixin.py", line 13, in decode
+    return pickle.loads(base64.b64decode(encoded_pointer))
+  File "/usr/local/lib/python3.8/base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Invalid base64-encoded string: number of data characters (85) cannot be 1 more than a multiple of 4
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    result = SearchStreetMarketing(
+  File "/src/./app/use_cases/search_street_marketing.py", line 27, in execute
+    return self.repository.search(
+  File "/src/./app/repositories/street_market_repository.py", line 28, in search
+    paginator = Paginate(
+  File "/usr/local/lib/python3.8/site-packages/mongonator/paginator.py", line 103, in paginate
+    response = self.paginate_one_batch()
+  File "/usr/local/lib/python3.8/site-packages/mongonator/paginator.py", line 44, in paginate_one_batch
+    self.build_query()
+  File "/usr/local/lib/python3.8/site-packages/mongonator/query.py", line 61, in build_query
+    self._build_internal_structures(self._next_page, True)
+  File "/usr/local/lib/python3.8/site-packages/mongonator/query.py", line 50, in _build_internal_structures
+    paginated_field, _id = self.decode(paginator_pointer)
+  File "/usr/local/lib/python3.8/site-packages/mongonator/pointermixin.py", line 13, in decode
+    return pickle.loads(base64.b64decode(encoded_pointer))
+  File "/usr/local/lib/python3.8/base64.py", line 87, in b64decode
+    return binascii.a2b_base64(s)
+binascii.Error: Invalid base64-encoded string: number of data characters (85) cannot be 1 more than a multiple of 4
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [22]
+uvicorn.error - INFO - Started server process [32]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [32]
+uvicorn.error - INFO - Started server process [40]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [40]
+uvicorn.error - INFO - Started server process [50]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA MARIANA'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA MARIANA'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA MARIANA'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA MARIANA'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA MARIANA'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA'}}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [50]
+uvicorn.error - INFO - Started server process [68]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA MARIANA'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'VILA MARIANA'}}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [68]
+uvicorn.error - INFO - Started server process [74]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [74]
+uvicorn.error - INFO - Started server process [76]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [76]
+uvicorn.error - INFO - Started server process [84]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [84]
+uvicorn.error - INFO - Started server process [86]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [86]
+uvicorn.error - INFO - Started server process [98]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [98]
+uvicorn.error - INFO - Started server process [114]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    result = SearchStreetMarketing(
+  File "/src/./app/use_cases/search_street_marketing.py", line 27, in execute
+    return self.repository.search(
+  File "/src/./app/repositories/street_market_repository.py", line 30, in search
+    next_page=paginator.next_page,
+UnboundLocalError: local variable 'paginator' referenced before assignment
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    result = SearchStreetMarketing(
+  File "/src/./app/use_cases/search_street_marketing.py", line 27, in execute
+    return self.repository.search(
+  File "/src/./app/repositories/street_market_repository.py", line 30, in search
+    next_page=paginator.next_page,
+UnboundLocalError: local variable 'paginator' referenced before assignment
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 21, in index
+    result = SearchStreetMarketing(
+  File "/src/./app/use_cases/search_street_marketing.py", line 27, in execute
+    return self.repository.search(
+  File "/src/./app/repositories/street_market_repository.py", line 30, in search
+    next_page=paginator.next_page,
+UnboundLocalError: local variable 'paginator' referenced before assignment
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [114]
+uvicorn.error - INFO - Started server process [122]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [122]
+uvicorn.error - INFO - Started server process [136]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [136]
+uvicorn.error - INFO - Started server process [146]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [146]
+uvicorn.error - INFO - Started server process [148]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [148]
+uvicorn.error - INFO - Started server process [150]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [150]
+uvicorn.error - INFO - Started server process [156]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [156]
+uvicorn.error - INFO - Started server process [158]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [158]
+uvicorn.error - INFO - Started server process [160]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [160]
+uvicorn.error - INFO - Started server process [162]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [162]
+uvicorn.error - INFO - Started server process [164]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [164]
+uvicorn.error - INFO - Started server process [166]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [166]
+uvicorn.error - INFO - Started server process [169]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - ERROR - Exception in ASGI application
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
+    await super().__call__(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/src/./main.py", line 25, in index
+    result = SearchStreetMarketing(
+  File "/src/./app/use_cases/search_street_marketing.py", line 40, in execute
+    return self.repository.search(
+TypeError: search() got an unexpected keyword argument 'neighborhood'
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [169]
+uvicorn.error - INFO - Started server process [174]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [174]
+uvicorn.error - INFO - Started server process [178]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'bairro': {'$eq': 'RUA GUIMARAES PASSOS'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'bairro': {'$eq': 'RUA GUIMARAES PASSOS'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'bairro': {'$eq': 'RUA GUIMARAES PASSOS'}, 'nome_feira': {'$eq': 'Sul 1'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'bairro': {'$eq': 'RUA GUIMARAES PASSOS'}, 'nome_feira': {'$eq': 'Sul 2'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'bairro': {'$eq': 'RUA GUIMARAES PASSOS'}, 'nome_feira': {'$eq': 'Sul 1'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'nome_feira': {'$eq': 'Sul 1'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'nome_feira': {'$eq': 'Sul 1'}}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {'nome_feira': {'$eq': 'Sul 1'}}

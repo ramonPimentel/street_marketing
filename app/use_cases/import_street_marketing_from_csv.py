@@ -21,13 +21,14 @@ class ImportStreetMarketingFromCSV:
             'cod_dist': row[5],
             'distrito': row[6],
             'cod_subpref': row[7],
-            'regiao5': row[8],
-            'regiao8': row[9],
-            'nome_feira': row[10],
-            'registro': row[11],
-            'logradouro': row[12],
-            'bairro': row[13],
-            'referencia': row[14]
+            'subpref': row[9]
+            'regiao5': row[10],
+            'regiao8': row[11],
+            'nome_feira': row[12],
+            'registro': row[13],
+            'logradouro': row[14],
+            'bairro': row[15],
+            'referencia': row[16]
           })
           StreetMarketRepository().add(model)
           print(model.dict())
