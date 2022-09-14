@@ -51,7 +51,7 @@ class TestCreateStreetRouter:
     response = client.get(f"/street_marketing/4041-0")
     assert response.status_code == 404
   
-  def test_create_success(self):
+  def test_show_create_success(self):
     delete_all_street_marketing()
     street_marketing = create_street_marketing()
     data = street_marketing.dict(exclude={'_id', 'id'})

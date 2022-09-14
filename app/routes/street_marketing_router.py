@@ -5,17 +5,17 @@ from app.use_cases.delete_street_marketing import DeleteStreetMarketing
 from app.use_cases.find_street_marketing import FindStreetMarketing
 from app.use_cases.search_street_marketing import SearchStreetMarketing
 from app.use_cases.update_sreet_marketing import UpdateStreetMarketing
-from fastapi.encoders import jsonable_encoder
 from fastapi import FastAPI
-from fastapi.responses import JSONResponse
-from app.repositories.street_market_repository import StreetMarketRepository
-from bson import json_util, ObjectId
-import json
-from fastapi import FastAPI, Query
-from typing import Optional, Union
-from pydantic import BaseModel, Field, root_validator
-from typing import List, Union
 from fastapi import APIRouter
+from fastapi.responses import JSONResponse
+from fastapi import FastAPI
+from bson import json_util
+import json
+
+from typing import Optional, Union
+from pydantic import BaseModel, Field
+from typing import List, Union
+
 
 api = APIRouter(
   tags=["street_marketing"],
@@ -23,27 +23,26 @@ api = APIRouter(
 
 @api.get("/street_marketing", tags=['street_marketing'])
 async def index(
-  district: Optional[str] = None,
-  region5: Optional[str] = None,
-  name: Optional[str] = None,
-  neighborhood: Optional[str] = None,
-  next_page: Optional[str] = None,
-  prev_page: Optional[str] = None,
+  distrito: Optional[str] = None,
+  regiao5: Optional[str] = None,
+  nome_feira: Optional[str] = None,
+  bairro: Optional[str] = None,
+  pagina_proxima: Optional[str] = None,
+  pagina_anterior: Optional[str] = None,
 ):
   result = SearchStreetMarketing(
-    district=district,
-    region5=region5,
-    name=name,
-    neighborhood=neighborhood,
-    next_page=next_page,
-    prev_page=prev_page
+    district=distrito,
+    region5=regiao5,
+    name=nome_feira,
+    neighborhood=bairro,
+    next_page=pagina_proxima,
+    prev_page=pagina_anterior
   ).execute()
 
   result_json = {
-    'response': json.loads(json_util.dumps(result.response)),
-    'prev_page': result.prev_page,
-    'next_page': result.next_page,
-    'batch_size': result.batch_size
+    'items': json.loads(json_util.dumps(result.response)),
+    'pagina_anterior': result.prev_page,
+    'pagina_proxima': result.next_page
   }
 
   return result_json
@@ -72,7 +71,7 @@ class Item(BaseModel):
 async def update(registro: str, item: StreetMarketing, tags=['street_marketing']):
   try:
     result = UpdateStreetMarketing(register_code=registro, data=item.dict(exclude_none=True)).execute()
-    return result.dict(exclude={'_id', 'id'})
+    return JSONResponse(status_code=200, content=result.dict(exclude={'_id', 'id'}))
   except ApplicationException as err:
     return JSONResponse(status_code=err.app_error_code, content={"message": f"{err.description}"})
 

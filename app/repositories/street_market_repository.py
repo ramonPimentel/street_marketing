@@ -16,18 +16,8 @@ class StreetMarketRepository(BaseRepository):
   def delete_by_register_code(self, register_code):
     self.collection.delete_one({"registro": register_code})
 
-  def find_by_code(self, code):
-    result = self.collection.find_one({"codigo": code})
-    if result:
-      return StreetMarketing(**result)
-    
-  def delete_by_code(self, code):
-    return self.collection.delete_one({"codigo": code})
-  
   def update(self, _id, data):
-    self.collection.update_one(
-      {"_id": _id}, {"$set": data}, upsert=True
-    )
+    self.collection.update_one({"_id": _id}, {"$set": data}, upsert=True)
 
   def search(
     self,
