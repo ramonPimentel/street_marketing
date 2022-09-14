@@ -8,7 +8,7 @@ class SearchStreetMarketing():
     name=None,
     neighborhood=None,
     next_page=None,
-    prev_page=None
+    prev_page=None,
   ):
     self.district = district
     self.region5 = region5

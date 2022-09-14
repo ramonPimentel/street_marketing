@@ -15,7 +15,7 @@ class CreateStreetMarketing():
 
   def check_exists(self):
     self._logger.info("check street_marketing exists")
-    street_marketing = self.repository.find_by_code(self.model.codigo)
+    street_marketing = self.repository.find_by({'registro': self.model.registro})
     if street_marketing:
       raise ApplicationException(
         app_error_code=422,

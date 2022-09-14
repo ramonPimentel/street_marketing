@@ -7,6 +7,7 @@ logging.basicConfig(
 
 class Logger():
   def __init__(self, scope=None):   
+    self._scope = scope
     self._logger = self.setupLog(scope)
   
   def setupLog (self, name) :
@@ -18,8 +19,6 @@ class Logger():
     )
 
     log.setLevel(logging.DEBUG)
-
-    log.addHandler( logging.handlers.RotatingFileHandler('%s.log' % name, mode='a', maxBytes=50000, backupCount=5) )
 
     return log
   

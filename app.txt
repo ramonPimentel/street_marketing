@@ -1,1214 +1,342 @@
-DeleteStreetMarketing - INFO - check street marketing exists
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [249]
-uvicorn.error - INFO - Started server process [255]
+start search
+query {}
+start search
+start search
+query {}
+query {}
+start search
+start search
+start search
+query {}
+query {}
+query {}
+uvicorn.error - INFO - Started server process [9]
 uvicorn.error - INFO - Waiting for application startup.
 uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [255]
-uvicorn.error - INFO - Started server process [257]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [257]
-uvicorn.error - INFO - Started server process [259]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - check street marketing exists
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [259]
-uvicorn.error - INFO - Started server process [266]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-DeleteStreetMarketing - INFO - check street marketing exists
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [266]
-uvicorn.error - INFO - Started server process [270]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [270]
-uvicorn.error - INFO - Started server process [272]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [272]
-uvicorn.error - INFO - Started server process [274]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - delete street marketing
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 65, in delete
-    DeleteStreetMarketing(id).execute()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 14, in execute
-    self.delete()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 27, in delete
-    self.repository.delete({'_id', self.street_marketing.id })
-  File "/src/./app/repositories/base_repository.py", line 19, in delete
-    return self.collection.delete_one(query)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1248, in delete_one
-    self._delete_retryable(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1206, in _delete_retryable
-    return self.__database.client._retryable_write(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1552, in _retryable_write
-    return self._retry_with_session(retryable, func, s, None)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1438, in _retry_with_session
-    return self._retry_internal(retryable, func, session, bulk)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1470, in _retry_internal
-    return func(session, sock_info, retryable)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1200, in _delete
-    return self._delete(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1143, in _delete
-    common.validate_is_mapping("filter", criteria)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/common.py", line 495, in validate_is_mapping
-    raise TypeError("%s must be an instance of dict, bson.son.SON, or "
-TypeError: filter must be an instance of dict, bson.son.SON, or any other type that inherits from collections.Mapping
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [274]
-uvicorn.error - INFO - Started server process [278]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - delete street marketing
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 65, in delete
-    DeleteStreetMarketing(id).execute()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 14, in execute
-    self.delete()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 27, in delete
-    self.repository.delete({'_id', self.street_marketing.id })
-  File "/src/./app/repositories/base_repository.py", line 19, in delete
-    return self.collection.delete_one(query)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1248, in delete_one
-    self._delete_retryable(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1206, in _delete_retryable
-    return self.__database.client._retryable_write(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1552, in _retryable_write
-    return self._retry_with_session(retryable, func, s, None)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1438, in _retry_with_session
-    return self._retry_internal(retryable, func, session, bulk)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1470, in _retry_internal
-    return func(session, sock_info, retryable)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1200, in _delete
-    return self._delete(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1143, in _delete
-    common.validate_is_mapping("filter", criteria)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/common.py", line 495, in validate_is_mapping
-    raise TypeError("%s must be an instance of dict, bson.son.SON, or "
-TypeError: filter must be an instance of dict, bson.son.SON, or any other type that inherits from collections.Mapping
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - delete street marketing
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 65, in delete
-    DeleteStreetMarketing(id).execute()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 14, in execute
-    self.delete()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 27, in delete
-    self.repository.delete({'_id', self.street_marketing.id })
-  File "/src/./app/repositories/base_repository.py", line 19, in delete
-    return self.collection.delete_one(query)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1248, in delete_one
-    self._delete_retryable(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1206, in _delete_retryable
-    return self.__database.client._retryable_write(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1552, in _retryable_write
-    return self._retry_with_session(retryable, func, s, None)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1438, in _retry_with_session
-    return self._retry_internal(retryable, func, session, bulk)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1470, in _retry_internal
-    return func(session, sock_info, retryable)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1200, in _delete
-    return self._delete(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1143, in _delete
-    common.validate_is_mapping("filter", criteria)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/common.py", line 495, in validate_is_mapping
-    raise TypeError("%s must be an instance of dict, bson.son.SON, or "
-TypeError: filter must be an instance of dict, bson.son.SON, or any other type that inherits from collections.Mapping
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - delete street marketing
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 65, in delete
-    DeleteStreetMarketing(id).execute()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 14, in execute
-    self.delete()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 27, in delete
-    self.repository.delete({'_id', self.street_marketing.id })
-  File "/src/./app/repositories/base_repository.py", line 19, in delete
-    return self.collection.delete_one(query)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1248, in delete_one
-    self._delete_retryable(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1206, in _delete_retryable
-    return self.__database.client._retryable_write(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1552, in _retryable_write
-    return self._retry_with_session(retryable, func, s, None)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1438, in _retry_with_session
-    return self._retry_internal(retryable, func, session, bulk)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1470, in _retry_internal
-    return func(session, sock_info, retryable)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1200, in _delete
-    return self._delete(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1143, in _delete
-    common.validate_is_mapping("filter", criteria)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/common.py", line 495, in validate_is_mapping
-    raise TypeError("%s must be an instance of dict, bson.son.SON, or "
-TypeError: filter must be an instance of dict, bson.son.SON, or any other type that inherits from collections.Mapping
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [278]
-uvicorn.error - INFO - Started server process [287]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - delete street marketing
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 65, in delete
-    DeleteStreetMarketing(id).execute()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 14, in execute
-    self.delete()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 27, in delete
-    self.repository.delete_one({'_id', self.street_marketing.id })
-AttributeError: 'StreetMarketRepository' object has no attribute 'delete_one'
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [287]
-uvicorn.error - INFO - Started server process [291]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - delete street marketing
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 65, in delete
-    DeleteStreetMarketing(id).execute()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 14, in execute
-    self.delete()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 27, in delete
-    self.repository.delete_one({'_id', self.street_marketing.id })
-  File "/src/./app/repositories/base_repository.py", line 19, in delete_one
-    return self.collection.delete_one(query)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1248, in delete_one
-    self._delete_retryable(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1206, in _delete_retryable
-    return self.__database.client._retryable_write(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1552, in _retryable_write
-    return self._retry_with_session(retryable, func, s, None)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1438, in _retry_with_session
-    return self._retry_internal(retryable, func, session, bulk)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1470, in _retry_internal
-    return func(session, sock_info, retryable)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1200, in _delete
-    return self._delete(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1143, in _delete
-    common.validate_is_mapping("filter", criteria)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/common.py", line 495, in validate_is_mapping
-    raise TypeError("%s must be an instance of dict, bson.son.SON, or "
-TypeError: filter must be an instance of dict, bson.son.SON, or any other type that inherits from collections.Mapping
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - delete street marketing
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 65, in delete
-    DeleteStreetMarketing(id).execute()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 14, in execute
-    self.delete()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 27, in delete
-    self.repository.delete_one({'_id', self.street_marketing.id })
-  File "/src/./app/repositories/base_repository.py", line 19, in delete_one
-    return self.collection.delete_one(query)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1248, in delete_one
-    self._delete_retryable(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1206, in _delete_retryable
-    return self.__database.client._retryable_write(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1552, in _retryable_write
-    return self._retry_with_session(retryable, func, s, None)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1438, in _retry_with_session
-    return self._retry_internal(retryable, func, session, bulk)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1470, in _retry_internal
-    return func(session, sock_info, retryable)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1200, in _delete
-    return self._delete(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1143, in _delete
-    common.validate_is_mapping("filter", criteria)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/common.py", line 495, in validate_is_mapping
-    raise TypeError("%s must be an instance of dict, bson.son.SON, or "
-TypeError: filter must be an instance of dict, bson.son.SON, or any other type that inherits from collections.Mapping
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [291]
-uvicorn.error - INFO - Started server process [297]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - delete street marketing
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 65, in delete
-    DeleteStreetMarketing(id).execute()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 14, in execute
-    self.delete()
-  File "/src/./app/use_cases/delete_street_marketing.py", line 27, in delete
-    self.repository.delete_one({'codigo', self.id })
-  File "/src/./app/repositories/base_repository.py", line 19, in delete_one
-    return self.collection.delete_one(query)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1248, in delete_one
-    self._delete_retryable(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1206, in _delete_retryable
-    return self.__database.client._retryable_write(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1552, in _retryable_write
-    return self._retry_with_session(retryable, func, s, None)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1438, in _retry_with_session
-    return self._retry_internal(retryable, func, session, bulk)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/mongo_client.py", line 1470, in _retry_internal
-    return func(session, sock_info, retryable)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1200, in _delete
-    return self._delete(
-  File "/usr/local/lib/python3.8/site-packages/pymongo/collection.py", line 1143, in _delete
-    common.validate_is_mapping("filter", criteria)
-  File "/usr/local/lib/python3.8/site-packages/pymongo/common.py", line 495, in validate_is_mapping
-    raise TypeError("%s must be an instance of dict, bson.son.SON, or "
-TypeError: filter must be an instance of dict, bson.son.SON, or any other type that inherits from collections.Mapping
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [297]
-uvicorn.error - INFO - Started server process [301]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [301]
-uvicorn.error - INFO - Started server process [303]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [303]
-uvicorn.error - INFO - Started server process [306]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - delete street marketing
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [306]
-uvicorn.error - INFO - Started server process [310]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [310]
-uvicorn.error - INFO - Started server process [312]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - delete street marketing
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [312]
-uvicorn.error - INFO - Started server process [318]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [318]
-uvicorn.error - INFO - Started server process [320]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [320]
-uvicorn.error - INFO - Started server process [322]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [322]
-uvicorn.error - INFO - Started server process [324]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [324]
-uvicorn.error - INFO - Started server process [326]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 63, in index
-    return JSONResponse(status_code=200, content=result.dict())
-AttributeError: 'UpdateStreetMarketing' object has no attribute 'dict'
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [326]
-uvicorn.error - INFO - Started server process [330]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [330]
-uvicorn.error - INFO - Started server process [332]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [332]
-uvicorn.error - INFO - Started server process [334]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 63, in index
-    return JSONResponse(status_code=200, content=result.dict())
-AttributeError: 'UpdateStreetMarketing' object has no attribute 'dict'
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [334]
-uvicorn.error - INFO - Started server process [338]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 63, in index
-    return JSONResponse(status_code=200, content=result.dict())
-AttributeError: 'UpdateStreetMarketing' object has no attribute 'dict'
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [338]
-uvicorn.error - INFO - Started server process [342]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [342]
-uvicorn.error - INFO - Started server process [346]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 62, in index
-    result = UpdateStreetMarketing(id, street_marketing.dict()).execute()
-  File "/src/./app/use_cases/update_sreet_marketing.py", line 12, in execute
-    self.check_exists()
-  File "/src/./app/use_cases/update_sreet_marketing.py", line 16, in check_exists
-    self._logger.info("check street marketing exists")
-AttributeError: 'UpdateStreetMarketing' object has no attribute '_logger'
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [346]
-uvicorn.error - INFO - Started server process [351]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-UpdateStreetMarketing - INFO - check street marketing exists
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [351]
-uvicorn.error - INFO - Started server process [355]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-UpdateStreetMarketing - INFO - check street marketing exists
-UpdateStreetMarketing - INFO - delete street marketing
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 62, in index
-    result = UpdateStreetMarketing(id, street_marketing.dict()).execute()
-  File "/src/./app/use_cases/update_sreet_marketing.py", line 15, in execute
-    return self.update()
-  File "/src/./app/use_cases/update_sreet_marketing.py", line 28, in update
-    return self.repository.update(self.street_marketing.codigo, self.street_marketing.id, self.data)
-AttributeError: 'NoneType' object has no attribute 'codigo'
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [355]
-uvicorn.error - INFO - Started server process [359]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [359]
-uvicorn.error - INFO - Started server process [361]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-UpdateStreetMarketing - INFO - check street marketing exists
-UpdateStreetMarketing - INFO - delete street marketing
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 62, in index
-    result = UpdateStreetMarketing(id, street_marketing.dict()).execute()
-  File "/src/./app/use_cases/update_sreet_marketing.py", line 15, in execute
-    return self.update()
-  File "/src/./app/use_cases/update_sreet_marketing.py", line 28, in update
-    return self.repository.update(self.street_marketing.codigo, self.street_marketing.id, self.data)
-AttributeError: 'NoneType' object has no attribute 'codigo'
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [361]
-uvicorn.error - INFO - Started server process [365]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [365]
-uvicorn.error - INFO - Started server process [367]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-UpdateStreetMarketing - INFO - check street marketing exists
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [367]
-uvicorn.error - INFO - Started server process [371]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-UpdateStreetMarketing - INFO - check street marketing exists
-UpdateStreetMarketing - INFO - delete street marketing
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 63, in index
-    return JSONResponse(status_code=200, content=result.dict())
-AttributeError: 'NoneType' object has no attribute 'dict'
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [371]
-uvicorn.error - INFO - Started server process [375]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-UpdateStreetMarketing - INFO - check street marketing exists
-UpdateStreetMarketing - INFO - check street marketing exists
-UpdateStreetMarketing - INFO - delete street marketing
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 63, in index
-    return JSONResponse(status_code=200, content=result.dict())
-AttributeError: 'NoneType' object has no attribute 'dict'
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [375]
-uvicorn.error - INFO - Started server process [381]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - delete street marketing
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [381]
-uvicorn.error - INFO - Started server process [387]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [387]
-uvicorn.error - INFO - Started server process [389]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-DeleteStreetMarketing - INFO - check street marketing exists
-DeleteStreetMarketing - INFO - check street marketing exists
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [389]
-uvicorn.error - INFO - Started server process [395]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [395]
-uvicorn.error - INFO - Started server process [398]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [398]
-uvicorn.error - INFO - Started server process [400]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [400]
-uvicorn.error - INFO - Started server process [402]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [402]
-uvicorn.error - INFO - Started server process [405]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-UpdateStreetMarketing - INFO - check street marketing exists
-UpdateStreetMarketing - INFO - delete street marketing
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 70, in index
-    return JSONResponse(status_code=200, content=result.dict())
-  File "/usr/local/lib/python3.8/site-packages/starlette/responses.py", line 49, in __init__
-    self.body = self.render(content)
-  File "/usr/local/lib/python3.8/site-packages/starlette/responses.py", line 174, in render
-    return json.dumps(
-  File "/usr/local/lib/python3.8/json/__init__.py", line 234, in dumps
-    return cls(
-  File "/usr/local/lib/python3.8/json/encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "/usr/local/lib/python3.8/json/encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "/usr/local/lib/python3.8/json/encoder.py", line 179, in default
-    raise TypeError(f'Object of type {o.__class__.__name__} '
-TypeError: Object of type ObjectId is not JSON serializable
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [405]
-uvicorn.error - INFO - Started server process [409]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-UpdateStreetMarketing - INFO - check street marketing exists
-UpdateStreetMarketing - INFO - delete street marketing
-uvicorn.error - ERROR - Exception in ASGI application
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 137, in jsonable_encoder
-    data = dict(obj)
-TypeError: 'ObjectId' object is not iterable
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 141, in jsonable_encoder
-    data = vars(obj)
-TypeError: vars() argument must have __dict__ attribute
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/protocols/http/httptools_impl.py", line 372, in run_asgi
-    result = await app(self.scope, self.receive, self.send)
-  File "/usr/local/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
-    return await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/applications.py", line 261, in __call__
-    await super().__call__(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
-    await self.middleware_stack(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
-    await self.app(scope, receive, _send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
-    raise exc
-  File "/usr/local/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
-    await self.app(scope, receive, sender)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
-    raise e
-  File "/usr/local/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
-    await route.handle(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
-    await self.app(scope, receive, send)
-  File "/usr/local/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
-    response = await func(request)
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 227, in app
-    raw_response = await run_endpoint_function(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
-    return await dependant.call(**values)
-  File "/src/./main.py", line 70, in index
-    return JSONResponse(status_code=200, content=jsonable_encoder(result.dict()))
-  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 101, in jsonable_encoder
-    encoded_value = jsonable_encoder(
-  File "/usr/local/lib/python3.8/site-packages/fastapi/encoders.py", line 144, in jsonable_encoder
-    raise ValueError(errors)
-ValueError: [TypeError("'ObjectId' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
-uvicorn.error - INFO - Shutting down
-uvicorn.error - INFO - Waiting for application shutdown.
-uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [409]
-uvicorn.error - INFO - Started server process [413]
-uvicorn.error - INFO - Waiting for application startup.
-uvicorn.error - INFO - Application startup complete.
-UpdateStreetMarketing - INFO - check street marketing exists
-UpdateStreetMarketing - INFO - delete street marketing
-UpdateStreetMarketing - INFO - check street marketing exists
-UpdateStreetMarketing - INFO - delete street marketing
+start search
 SearchStreetMarketing - INFO - start search
-SearchStreetMarketing - INFO - query {'distrito': {'$eq': 'string3'}}
+query {}
+SearchStreetMarketing - INFO - query {}
+start search
+start search
+SearchStreetMarketing - INFO - start search
+query {}
+query {}
+SearchStreetMarketing - INFO - query {}
 uvicorn.error - INFO - Shutting down
 uvicorn.error - INFO - Waiting for application shutdown.
 uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [413]
-uvicorn.error - INFO - Started server process [421]
+uvicorn.error - INFO - Finished server process [9]
+uvicorn.error - INFO - Started server process [15]
 uvicorn.error - INFO - Waiting for application startup.
 uvicorn.error - INFO - Application startup complete.
 uvicorn.error - INFO - Shutting down
 uvicorn.error - INFO - Waiting for application shutdown.
 uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [421]
-uvicorn.error - INFO - Started server process [424]
+uvicorn.error - INFO - Finished server process [15]
+uvicorn.error - INFO - Started server process [17]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+start search
+SearchStreetMarketing - INFO - start search
+query {}
+SearchStreetMarketing - INFO - query {}
+start search
+start search
+SearchStreetMarketing - INFO - start search
+query {}
+query {}
+SearchStreetMarketing - INFO - query {}
+start search
+start search
+start search
+SearchStreetMarketing - INFO - start search
+query {}
+query {}
+query {}
+SearchStreetMarketing - INFO - query {}
+start search
+start search
+start search
+start search
+SearchStreetMarketing - INFO - start search
+query {}
+query {}
+query {}
+query {}
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Started server process [9]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+start search
+SearchStreetMarketing - INFO - start search
+query {}
+SearchStreetMarketing - INFO - query {}
+start search
+start search
+SearchStreetMarketing - INFO - start search
+query {}
+query {}
+SearchStreetMarketing - INFO - query {}
+start search
+start search
+start search
+SearchStreetMarketing - INFO - start search
+query {}
+query {}
+query {}
+SearchStreetMarketing - INFO - query {}
+start search
+start search
+start search
+start search
+SearchStreetMarketing - INFO - start search
+query {}
+query {}
+query {}
+query {}
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [9]
+uvicorn.error - INFO - Started server process [19]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+start search
+SearchStreetMarketing - INFO - start search
+query {}
+SearchStreetMarketing - INFO - query {}
+start search
+start search
+SearchStreetMarketing - INFO - start search
+query {}
+query {}
+SearchStreetMarketing - INFO - query {}
+start search
+start search
+start search
+SearchStreetMarketing - INFO - start search
+query {}
+query {}
+query {}
+SearchStreetMarketing - INFO - query {}
+start search
+start search
+start search
+start search
+SearchStreetMarketing - INFO - start search
+query {}
+query {}
+query {}
+query {}
+SearchStreetMarketing - INFO - query {}
+start search
+start search
+start search
+start search
+start search
+SearchStreetMarketing - INFO - start search
+query {}
+query {}
+query {}
+query {}
+query {}
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [19]
+uvicorn.error - INFO - Started server process [31]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Started server process [9]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [9]
+uvicorn.error - INFO - Started server process [17]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+SearchStreetMarketing - INFO - start search
+SearchStreetMarketing - INFO - query {}
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [17]
+uvicorn.error - INFO - Started server process [23]
 uvicorn.error - INFO - Waiting for application startup.
 uvicorn.error - INFO - Application startup complete.
 uvicorn.error - INFO - Shutting down
 uvicorn.error - INFO - Waiting for application shutdown.
 uvicorn.error - INFO - Application shutdown complete.
-uvicorn.error - INFO - Finished server process [424]
+uvicorn.error - INFO - Finished server process [23]
+uvicorn.error - INFO - Started server process [25]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [25]
+uvicorn.error - INFO - Started server process [27]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [27]
+uvicorn.error - INFO - Started server process [29]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [29]
+uvicorn.error - INFO - Started server process [31]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [31]
+uvicorn.error - INFO - Started server process [33]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [33]
+uvicorn.error - INFO - Started server process [35]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [35]
+uvicorn.error - INFO - Started server process [37]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [37]
+uvicorn.error - INFO - Started server process [39]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [39]
+uvicorn.error - INFO - Started server process [41]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [41]
+uvicorn.error - INFO - Started server process [43]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [43]
+uvicorn.error - INFO - Started server process [45]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [45]
+uvicorn.error - INFO - Started server process [47]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [47]
+uvicorn.error - INFO - Started server process [49]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [49]
+uvicorn.error - INFO - Started server process [51]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [51]
+uvicorn.error - INFO - Started server process [53]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [53]
+uvicorn.error - INFO - Started server process [55]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [55]
+uvicorn.error - INFO - Started server process [57]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [57]
+uvicorn.error - INFO - Started server process [59]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [59]
+uvicorn.error - INFO - Started server process [61]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [61]
+uvicorn.error - INFO - Started server process [63]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.
+uvicorn.error - INFO - Shutting down
+uvicorn.error - INFO - Waiting for application shutdown.
+uvicorn.error - INFO - Application shutdown complete.
+uvicorn.error - INFO - Finished server process [63]
+uvicorn.error - INFO - Started server process [65]
+uvicorn.error - INFO - Waiting for application startup.
+uvicorn.error - INFO - Application startup complete.

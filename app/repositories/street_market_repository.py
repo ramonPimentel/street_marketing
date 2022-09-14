@@ -7,7 +7,15 @@ class StreetMarketRepository(BaseRepository):
   def __init__(self):
     db = self.get_db()
     self.collection = db.street_market
-  
+
+  def find_by(self, query):
+    result = self.collection.find_one(query)
+    if result:
+      return StreetMarketing(**result)
+    
+  def delete_by_register_code(self, register_code):
+    self.collection.delete_one({"registro": register_code})
+
   def find_by_code(self, code):
     result = self.collection.find_one({"codigo": code})
     if result:
