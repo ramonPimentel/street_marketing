@@ -11,7 +11,7 @@ class CreateStreetMarketing():
 
   def execute(self):
     self.check_exists()
-    self.create()
+    return self.create()
 
   def check_exists(self):
     self._logger.info("check street_marketing exists")
@@ -24,5 +24,5 @@ class CreateStreetMarketing():
   
   def create(self):
     self._logger.info("create street marketing")
-    self.repository.add(self.model)
+    return self.repository.add(self.model)
 

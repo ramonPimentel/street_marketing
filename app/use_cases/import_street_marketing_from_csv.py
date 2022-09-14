@@ -13,7 +13,6 @@ class ImportStreetMarketingFromCSV:
       for row in spamreader:
         if row[0] != 'ID':
           model = StreetMarketing(**{
-            'codigo': row[0],
             'long': row[1],
             'lat': row[2],
             'setcens': row[3],
@@ -21,14 +20,14 @@ class ImportStreetMarketingFromCSV:
             'cod_dist': row[5],
             'distrito': row[6],
             'cod_subpref': row[7],
-            'subpref': row[9]
-            'regiao5': row[10],
-            'regiao8': row[11],
-            'nome_feira': row[12],
-            'registro': row[13],
-            'logradouro': row[14],
-            'bairro': row[15],
-            'referencia': row[16]
+            'subpref': row[8],
+            'regiao5': row[9],
+            'regiao8': row[10],
+            'nome_feira': row[11],
+            'registro': row[12],
+            'logradouro': row[13],
+            'bairro': row[14],
+            'referencia': row[15]
           })
           StreetMarketRepository().add(model)
           print(model.dict())

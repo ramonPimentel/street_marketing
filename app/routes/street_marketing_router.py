@@ -2,6 +2,7 @@ from app.exceptions.aplication_exception import ApplicationException
 from app.models.street_marketing_model import StreetMarketing
 from app.use_cases.create_street_marketing import CreateStreetMarketing
 from app.use_cases.delete_street_marketing import DeleteStreetMarketing
+from app.use_cases.find_street_marketing import FindStreetMarketing
 from app.use_cases.search_street_marketing import SearchStreetMarketing
 from app.use_cases.update_sreet_marketing import UpdateStreetMarketing
 from fastapi.encoders import jsonable_encoder
@@ -47,17 +48,19 @@ async def index(
 
   return result_json
 
-@api.get("/street_marketing/{id}", response_model=StreetMarketing, tags=['street_marketing'])
-async def show(id: str):
-  repository = StreetMarketRepository()
-  result = repository.find()
-  
-  return json.loads(json_util.dumps(result))
+@api.get("/street_marketing/{registro}", response_model=StreetMarketing, tags=['feiras'])
+async def show(registro: str):
+  try:
+    street_marketing = FindStreetMarketing(registro).execute()
+    return street_marketing.dict(exclude={'_id', 'id'})
+  except ApplicationException as err:
+    return JSONResponse(status_code=err.app_error_code, content={"message": f"{err.description}"})
 
-@api.post("/street_marketing", tags=['street_marketing'])
+@api.post("/street_marketing", response_model=StreetMarketing)
 async def create(street_marketing: StreetMarketing):
   try:
-    CreateStreetMarketing(street_marketing).execute()
+    result = CreateStreetMarketing(street_marketing).execute()
+    return result.dict(exclude={'_id', 'id'})
   except ApplicationException as err:
     return JSONResponse(status_code=err.app_error_code, content={"message": f"{err.description}"})
 
@@ -65,18 +68,18 @@ class Item(BaseModel):
   codigo: Union[str, None] = None
   nome_feira: Union[str, None] = None
 
-@api.put("/street_marketing/{id}", response_model=StreetMarketing)
-async def update(id: int, item: StreetMarketing, tags=['street_marketing']):
+@api.put("/street_marketing/{registro}", response_model=StreetMarketing)
+async def update(registro: str, item: StreetMarketing, tags=['street_marketing']):
   try:
-    result = UpdateStreetMarketing(id=id, data=item.dict(exclude_none=True)).execute()
-    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(result.dict())))
+    result = UpdateStreetMarketing(register_code=registro, data=item.dict(exclude_none=True)).execute()
+    return result.dict(exclude={'_id', 'id'})
   except ApplicationException as err:
     return JSONResponse(status_code=err.app_error_code, content={"message": f"{err.description}"})
 
-@api.delete("/street_marketing/{id}", tags=['street_marketing'])
-async def delete(id: int):
+@api.delete("/street_marketing/{registro}", tags=['street_marketing'])
+async def delete(registro: str):
   try:
-    DeleteStreetMarketing(id).execute()
+    DeleteStreetMarketing(registro).execute()
     return JSONResponse(status_code=200, content={"message": "Street Marketing deleted"})
   except ApplicationException as err:
     return JSONResponse(status_code=err.app_error_code, content={"message": f"{err.description}"})

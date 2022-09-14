@@ -4,9 +4,9 @@ from app.utils.logger import Logger
 
 
 class UpdateStreetMarketing():
-  def __init__(self, id, data):
+  def __init__(self, register_code, data):
     self.data = data
-    self.id = id
+    self.register_code = register_code
     self.repository = StreetMarketRepository()
     self._logger = Logger(self.__class__.__name__)
 
@@ -16,7 +16,7 @@ class UpdateStreetMarketing():
 
   def check_exists(self):
     self._logger.info("check street marketing exists")
-    self.street_marketing = self.repository.find_by({'registro': self.id})
+    self.street_marketing = self.repository.find_by({'registro': self.register_code})
     if not self.street_marketing:
       raise ApplicationException(
         app_error_code=404,
@@ -25,4 +25,5 @@ class UpdateStreetMarketing():
   
   def update(self):
     self._logger.info("delete street marketing")
-    return self.repository.update(self.street_marketing.codigo, self.street_marketing.id, self.data)
+    self.repository.update(self.street_marketing.id, self.data)
+    return self.repository.find_by({'registro': self.register_code})

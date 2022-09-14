@@ -12,6 +12,7 @@ class StreetMarketing(BaseModel):
   cod_dist: Optional[int] = Field(None)
   distrito: Optional[str] = Field(None)
   cod_subpref: Optional[int] = Field(None)
+  subprefe: Optional[str] = Field(None)
   regiao5: Optional[str] = Field(None)
   regiao8: Optional[str] = Field(None)
   nome_feira: Optional[str] = Field(None)

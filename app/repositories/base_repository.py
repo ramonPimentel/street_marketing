@@ -14,3 +14,6 @@ class BaseRepository:
     result = self.collection.insert_one(data)
     model.id = result.inserted_id
     return model
+
+  def delete_all(self):
+    return self.collection.delete_many({})

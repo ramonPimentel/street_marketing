@@ -24,11 +24,10 @@ class StreetMarketRepository(BaseRepository):
   def delete_by_code(self, code):
     return self.collection.delete_one({"codigo": code})
   
-  def update(self, id, _id, data):
+  def update(self, _id, data):
     self.collection.update_one(
       {"_id": _id}, {"$set": data}, upsert=True
     )
-    return self.find_by_code(id)
 
   def search(
     self,

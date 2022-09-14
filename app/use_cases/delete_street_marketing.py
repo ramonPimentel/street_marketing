@@ -4,8 +4,8 @@ from app.utils.logger import Logger
 
 
 class DeleteStreetMarketing():
-  def __init__(self, id):
-    self.id = id
+  def __init__(self, register_code):
+    self.register_code = register_code
     self.repository = StreetMarketRepository()
     self._logger = Logger(self.__class__.__name__)
 
@@ -15,13 +15,13 @@ class DeleteStreetMarketing():
 
   def check_exists(self):
     self._logger.info("check street marketing exists")
-    self.street_marketing = self.repository.find_by({'registro': self.id})
+    self.street_marketing = self.repository.find_by({'registro': self.register_code})
     if not self.street_marketing:
       raise ApplicationException(
         app_error_code=404,
-        msg='Model not Existis'
+        msg='Not Found'
       )
   
   def delete(self):
     self._logger.info("delete street marketing")
-    self.repository.delete_by_register_code(self.id)
+    self.repository.delete_by_register_code(self.register_code)
