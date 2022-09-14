@@ -1,18 +1,12 @@
-name: Docker Image CI
 
-on:
-  push:
-    branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
-
+name: docker-compose-actions-workflow
+on: push
 jobs:
-  jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Build the stack
-        run: docker-compose build server
+        run: docker-compose build
       - name: Test
         run: docker-compose exec server make coverage
