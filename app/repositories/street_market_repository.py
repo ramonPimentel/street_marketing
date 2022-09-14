@@ -25,10 +25,6 @@ class StreetMarketRepository(BaseRepository):
     return self.collection.delete_one({"codigo": code})
   
   def update(self, id, _id, data):
-    print(">>>>>>>")
-    print(data)
-    print(">>>>>>>")
-
     self.collection.update_one(
       {"_id": _id}, {"$set": data}, upsert=True
     )

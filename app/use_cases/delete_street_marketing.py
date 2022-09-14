@@ -15,7 +15,7 @@ class DeleteStreetMarketing():
 
   def check_exists(self):
     self._logger.info("check street marketing exists")
-    self.street_marketing = self.repository.find_by_code(self.id)
+    self.street_marketing = self.repository.find_by({'registro': self.id})
     if not self.street_marketing:
       raise ApplicationException(
         app_error_code=404,
@@ -24,4 +24,4 @@ class DeleteStreetMarketing():
   
   def delete(self):
     self._logger.info("delete street marketing")
-    self.repository.delete_by_code(self.id)
+    self.repository.delete_by_register_code(self.id)
