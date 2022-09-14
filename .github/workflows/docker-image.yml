@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the stack
-        run: docker-compose build
+        run: docker-compose up server
       - name: Test
         run: docker-compose exec server make coverage
