@@ -3,6 +3,8 @@ from app.models.street_marketing_model import StreetMarketing
 from app.use_cases.create_street_marketing import CreateStreetMarketing
 from app.use_cases.delete_street_marketing import DeleteStreetMarketing
 from app.use_cases.search_street_marketing import SearchStreetMarketing
+from app.use_cases.update_sreet_marketing import UpdateStreetMarketing
+from fastapi.encoders import jsonable_encoder
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
 from app.repositories.street_market_repository import StreetMarketRepository
@@ -10,6 +12,8 @@ from bson import json_util, ObjectId
 import json
 from fastapi import FastAPI, Query
 from typing import Optional, Union
+from pydantic import BaseModel, Field, root_validator
+from typing import List, Union
 
 app = FastAPI()
 
@@ -55,9 +59,17 @@ async def create(street_marketing: StreetMarketing):
   except ApplicationException as err:
     return JSONResponse(status_code=err.app_error_code, content={"message": f"{err.description}"})
 
+class Item(BaseModel):
+  codigo: Union[str, None] = None
+  nome_feira: Union[str, None] = None
+
 @app.put("/street_marketing/{id}", response_model=StreetMarketing)
-async def index(id: str, street_marketing: StreetMarketing):
-  return {}
+async def index(id: int, item: StreetMarketing):
+  try:
+    result = UpdateStreetMarketing(id=id, data=item.dict(exclude_none=True)).execute()
+    return JSONResponse(status_code=200, content=json.loads(json_util.dumps(result.dict())))
+  except ApplicationException as err:
+    return JSONResponse(status_code=err.app_error_code, content={"message": f"{err.description}"})
 
 @app.delete("/street_marketing/{id}")
 async def delete(id: int):
