@@ -14,7 +14,7 @@ class CreateStreetMarketing():
     self.create()
 
   def check_exists(self):
-    self._logger.info("check street marketing exists")
+    self._logger.info("check street_marketing exists")
     street_marketing = self.repository.find_by_code(self.model.codigo)
     if street_marketing:
       raise ApplicationException(

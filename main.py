@@ -1,6 +1,7 @@
 from app.exceptions.aplication_exception import ApplicationException
 from app.models.street_marketing_model import StreetMarketing
 from app.use_cases.create_street_marketing import CreateStreetMarketing
+from app.use_cases.delete_street_marketing import DeleteStreetMarketing
 from app.use_cases.search_street_marketing import SearchStreetMarketing
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
@@ -52,10 +53,16 @@ async def create(street_marketing: StreetMarketing):
   try:
     CreateStreetMarketing(street_marketing).execute()
   except ApplicationException as err:
-    return JSONResponse(status_code=422, content={"message": f"{err}"})
+    return JSONResponse(status_code=err.app_error_code, content={"message": f"{err.description}"})
 
 @app.put("/street_marketing/{id}", response_model=StreetMarketing)
 async def index(id: str, street_marketing: StreetMarketing):
-  print(id)
-  print(street_marketing.dict())
   return {}
+
+@app.delete("/street_marketing/{id}")
+async def delete(id: int):
+  try:
+    DeleteStreetMarketing(id).execute()
+    return JSONResponse(status_code=200, content={"message": "Street Marketing deleted"})
+  except ApplicationException as err:
+    return JSONResponse(status_code=err.app_error_code, content={"message": f"{err.description}"})

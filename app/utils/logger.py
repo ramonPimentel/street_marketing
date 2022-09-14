@@ -12,7 +12,10 @@ class Logger():
   def setupLog (self, name) :
     log = logging.getLogger(name)
 
-    logging.basicConfig(format="%(levelname)s %(asctime)s %(funcName)s %(lineno)d %(message)s", filename='app.txt')
+    logging.basicConfig(
+      format="%(levelname)s %(asctime)s %(funcName)s %(lineno)d %(message)s",
+      filename='app.txt'
+    )
 
     log.setLevel(logging.DEBUG)
 

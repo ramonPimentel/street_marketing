@@ -12,11 +12,9 @@ class StreetMarketRepository(BaseRepository):
     result = self.collection.find_one({"codigo": code})
     if result:
       return StreetMarketing(**result)
-
-  def find_none(self):
-    result = self.collection.find_one({})
-    if result:
-      return StreetMarketing(**result)
+    
+  def delete_by_code(self, code):
+    return self.collection.delete_one({"codigo": code})
 
   def search(
     self,
