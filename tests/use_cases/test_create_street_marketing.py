@@ -3,19 +3,21 @@ from app.models.street_marketing_model import StreetMarketing
 from app.repositories.street_market_repository import StreetMarketRepository
 from app.use_cases.create_street_marketing import CreateStreetMarketing
 import pytest
+from tests.fixtures.utils import delete_all_street_marketing
 class TestCreateStreetMarketing:
 
   def test_when_street_marketing_is_valid(self):
+    delete_all_street_marketing()
     repository =  StreetMarketRepository()
     street_marketing = StreetMarketing(**{
       'long': -46550164,
       'lat': -23558733,
       'setcens': 355030885000091,
       'areap': 3550308005040,
-      'coddist': 87,
+      'cod_dist': 87,
       'distrito': 'VILA FORMOSA',
-      'codsubpref': 26,
-      'subprefe': 'ARICANDUVA-FORMOSA-CARRAO',
+      'cod_subpref': 26,
+      'subpref': 'ARICANDUVA-FORMOSA-CARRAO',
       'regiao5': 'Leste',
       'regiao8': 'Leste 1',
       'nome_feira': 'VILA FORMOSA',
@@ -33,16 +35,17 @@ class TestCreateStreetMarketing:
     assert result.registro == street_marketing.registro
 
   def test_when_street_marketing_exists(self):
+    delete_all_street_marketing()
     repository =  StreetMarketRepository()
     street_marketing = StreetMarketing(**{
       'long': -46550164,
       'lat': -23558733,
       'setcens': 355030885000091,
       'areap': 3550308005040,
-      'coddist': 87,
+      'cod_dist': 87,
       'distrito': 'VILA FORMOSA',
-      'codsubpref': 26,
-      'subprefe': 'ARICANDUVA-FORMOSA-CARRAO',
+      'cod_subpref': 26,
+      'subpref': 'ARICANDUVA-FORMOSA-CARRAO',
       'regiao5': 'Leste',
       'regiao8': 'Leste 1',
       'nome_feira': 'VILA FORMOSA',

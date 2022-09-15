@@ -5,7 +5,7 @@ from fastapi import FastAPI
 from fastapi.testclient import TestClient
 import pytest
 from app.routes.street_marketing_router import api as street_marketing_api
-from tests.routers.utils import create_street_marketing, delete_all_street_marketing
+from tests.fixtures.utils import create_street_marketing, delete_all_street_marketing
 
 app = FastAPI()
 app.include_router(street_marketing_api)
@@ -18,10 +18,9 @@ class TestCreateStreetRouter:
     response = client.get("/street_marketing")
     assert response.status_code == 200
     response_json = response.json()
-    assert response_json['batch_size'] == 1
-    assert response_json['next_page'] is None
-    assert response_json['prev_page'] is None
-    assert len(response_json['response']) == 1
+    assert response_json['pagina_anterior'] is None
+    assert response_json['pagina_proxima'] is None
+    assert len(response_json['items']) == 1
   
   def test_show_when_exists_street_marketing(self):
     delete_all_street_marketing()
@@ -37,7 +36,7 @@ class TestCreateStreetRouter:
     assert response_json['cod_dist'] == street_marketing.cod_dist
     assert response_json['distrito'] == street_marketing.distrito
     assert response_json['cod_subpref'] == street_marketing.cod_subpref
-    assert response_json['subprefe'] == street_marketing.subprefe
+    assert response_json['subpref'] == street_marketing.subpref
     assert response_json['regiao5'] == street_marketing.regiao5
     assert response_json['regiao8'] == street_marketing.regiao8
     assert response_json['registro'] == street_marketing.registro
