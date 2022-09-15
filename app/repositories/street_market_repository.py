@@ -6,7 +6,7 @@ from mongonator import Paginate, ASCENDING
 class StreetMarketRepository(BaseRepository):
   def __init__(self):
     db = self.get_db()
-    self.collection = db.street_market
+    self.collection = db.feira_livres
 
   def find_by(self, query):
     result = self.collection.find_one(query)

@@ -4,6 +4,8 @@ services:
   server:
     build:
       context: ./
+    environment:
+      - DATABASE_DB=mongodb://mongo:27017/
     depends_on:
       - mongo
     restart: always

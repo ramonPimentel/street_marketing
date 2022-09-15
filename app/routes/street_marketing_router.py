@@ -68,13 +68,8 @@ class Item(BaseModel):
   codigo: Union[str, None] = None
   nome_feira: Union[str, None] = None
 
-<<<<<<< HEAD
 @api.put("/feira_livres/{registro}", response_model=StreetMarketing)
 async def update(registro: str, item: UpdateStreetMarketingSchema):
-=======
-@api.put("/street_marketing/{registro}", response_model=StreetMarketing)
-async def update(registro: str, item: UpdateStreetMarketingSchema, tags=['street_marketing']):
->>>>>>> 7b6743efd7775be4974f9e4ce493bc7608f7c7a8
   try:
     result = UpdateStreetMarketing(register_code=registro, data=item.dict(exclude_none=True)).execute()
     return JSONResponse(status_code=200, content=result.dict(exclude={'_id', 'id'}))

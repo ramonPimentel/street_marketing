@@ -5,7 +5,7 @@ class BaseRepository:
   def get_db(self):
     conn = Connection()
     session = conn.session_mongo_db
-    db = session.test
+    db = session.feira_livres
     return db
   
   def add(self, model):
