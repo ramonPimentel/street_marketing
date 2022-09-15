@@ -1,5 +1,6 @@
 from app.exceptions.aplication_exception import ApplicationException
 from app.models.street_marketing_model import StreetMarketing
+from app.schemas.update_street_marketing_schema import UpdateStreetMarketingSchema
 from app.use_cases.create_street_marketing import CreateStreetMarketing
 from app.use_cases.delete_street_marketing import DeleteStreetMarketing
 from app.use_cases.find_street_marketing import FindStreetMarketing
@@ -68,7 +69,7 @@ class Item(BaseModel):
   nome_feira: Union[str, None] = None
 
 @api.put("/street_marketing/{registro}", response_model=StreetMarketing)
-async def update(registro: str, item: StreetMarketing, tags=['street_marketing']):
+async def update(registro: str, item: UpdateStreetMarketingSchema, tags=['street_marketing']):
   try:
     result = UpdateStreetMarketing(register_code=registro, data=item.dict(exclude_none=True)).execute()
     return JSONResponse(status_code=200, content=result.dict(exclude={'_id', 'id'}))
