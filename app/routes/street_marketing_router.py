@@ -33,7 +33,7 @@ async def index(
 ):
   result = SearchStreetMarketing(
     district=distrito,
-    region5=regiao5,
+    region=regiao5,
     name=nome_feira,
     neighborhood=bairro,
     next_page=pagina_proxima,

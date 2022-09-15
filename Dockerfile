@@ -12,6 +12,9 @@ RUN pip install --upgrade pip \
     pip install setuptools wheel --no-cache-dir --upgrade \
     pip install --no-cache-dir -r ./base.txt
 
-RUN export PYTHONPATH=$PWD
+
+RUN export PYTHONPATH=$PYTHONPATH:/src/app
+
+ENV PYTHONPATH=$PYTHONPATH:/src/app
 
 EXPOSE 9000

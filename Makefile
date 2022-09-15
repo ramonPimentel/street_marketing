@@ -15,3 +15,10 @@ clean:
 
 coverage: clean
 	@py.test --cov=app --cov-report=term-missing --cov-report=xml --cov-fail-under=80 ./tests/
+
+migrate-up:
+	mongodb-migrate --url ${DATABASE_DB} --migrations migrations
+	@echo "✅ Migrações aplicadas"
+
+run-import:
+	@python3 ./app/commands/import_csv.py 

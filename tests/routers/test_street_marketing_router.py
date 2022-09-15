@@ -15,7 +15,7 @@ class TestCreateStreetRouter:
   def test_index(self):
     delete_all_street_marketing()
     create_street_marketing()
-    response = client.get("/street_marketing")
+    response = client.get("/feira_livres")
     assert response.status_code == 200
     response_json = response.json()
     assert response_json['pagina_anterior'] is None
@@ -26,7 +26,7 @@ class TestCreateStreetRouter:
     delete_all_street_marketing()
     street_marketing = create_street_marketing()
 
-    response = client.get(f"/street_marketing/{street_marketing.registro}")
+    response = client.get(f"/feira_livres/{street_marketing.registro}")
     assert response.status_code == 200
     response_json = response.json()
     assert response_json['long'] == street_marketing.long
@@ -47,7 +47,7 @@ class TestCreateStreetRouter:
   def test_show_when_not_exists_street_marketing(self):
     delete_all_street_marketing()
 
-    response = client.get(f"/street_marketing/4041-0")
+    response = client.get(f"/feira_livres/4041-0")
     assert response.status_code == 404
   
   def test_show_create_success(self):
@@ -56,7 +56,7 @@ class TestCreateStreetRouter:
     data = street_marketing.dict(exclude={'_id', 'id'})
     delete_all_street_marketing()
 
-    response = client.post(f"/street_marketing", json=data)
+    response = client.post(f"/feira_livres", json=data)
     response_json = response.json()
     assert response.status_code == 200
     assert response_json['registro'] == data['registro']
@@ -66,14 +66,14 @@ class TestCreateStreetRouter:
     street_marketing = create_street_marketing()
     data = street_marketing.dict(exclude={'_id', 'id'})
 
-    response = client.post(f"/street_marketing", json=data)
+    response = client.post(f"/feira_livres", json=data)
     assert response.status_code == 422
   
   def test_update_success(self):
     delete_all_street_marketing()
     street_marketing = create_street_marketing()
 
-    response = client.put(f"/street_marketing/{street_marketing.registro}", json={'bairro': 'test'})
+    response = client.put(f"/feira_livres/{street_marketing.registro}", json={'bairro': 'test'})
     response_json = response.json()
     assert response.status_code == 200
     assert response_json['bairro'] == 'test'
@@ -81,18 +81,18 @@ class TestCreateStreetRouter:
   def test_put_when_user_not_existis(self):
     delete_all_street_marketing()
 
-    response = client.put(f"/street_marketing/4041-0", json={'regiao5': 'regiao5'})
+    response = client.put(f"/feira_livres/4041-0", json={'regiao5': 'regiao5'})
     assert response.status_code == 404
 
   def test_delete_success(self):
     delete_all_street_marketing()
     street_marketing = create_street_marketing()
 
-    response = client.delete(f"/street_marketing/{street_marketing.registro}", json={'bairro': 'test'})
+    response = client.delete(f"/feira_livres/{street_marketing.registro}", json={'bairro': 'test'})
     assert response.status_code == 200
   
   def test_delete_when_user_not_existis(self):
     delete_all_street_marketing()
 
-    response = client.delete(f"/street_marketing/4041-0", json={'regiao5': 'regiao5'})
+    response = client.delete(f"/feira_livres/4041-0", json={'regiao5': 'regiao5'})
     assert response.status_code == 404

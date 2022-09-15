@@ -1,0 +1,3 @@
+from app.use_cases.import_street_marketing_from_csv import ImportStreetMarketingFromCSV
+
+ImportStreetMarketingFromCSV().execute()

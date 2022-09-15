@@ -5,11 +5,11 @@ services:
     build:
       context: ./
     environment:
-      - DATABASE_DB=mongodb://mongo:27017/
+      - DATABASE_DB=mongodb://mongo:27017/feira_livres
     depends_on:
       - mongo
     restart: always
-    command: make run
+    command: bash ./scripts/up_server.sh
     ports:
       - "9000:9000"
     volumes:

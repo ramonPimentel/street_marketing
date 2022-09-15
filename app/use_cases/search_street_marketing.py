@@ -4,14 +4,14 @@ from app.utils.logger import Logger
 class SearchStreetMarketing():
   def __init__(self,
     district=None,
-    region5=None,
+    region=None,
     name=None,
     neighborhood=None,
     next_page=None,
     prev_page=None,
   ):
     self.district = district
-    self.region5 = region5
+    self.region = region
     self.name = name
     self.neighborhood = neighborhood
     self.next_page = next_page
@@ -32,8 +32,8 @@ class SearchStreetMarketing():
     if self.name:
       query['nome_feira'] = { '$eq' : self.name }
     
-    if self.region5:
-      query['region5'] = { '$eq' : self.region5 }
+    if self.region:
+      query['regiao5'] = { '$eq' : self.region }
 
     self._logger.info(f"query {query}")
       

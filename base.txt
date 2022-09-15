@@ -17,3 +17,4 @@ pytest-mock==3.7.0
 pytest-responses==0.4.0
 python-jose==3.3.0
 PyMongonnator==1.0.3
+mongodb-migrations==1.1.1
