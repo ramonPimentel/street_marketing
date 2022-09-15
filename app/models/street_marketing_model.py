@@ -26,7 +26,4 @@ class StreetMarketing(BaseModel):
     fields = list(values.keys())
     for field in fields:
         value = values[field]
-        if isinstance(value, dict) or isinstance(value, list):
-            if not values[field]:
-                values.pop(field)
     return values

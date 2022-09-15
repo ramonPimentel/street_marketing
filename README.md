@@ -2,6 +2,8 @@
 
 Esse serviço tem a responsabilidade de gerenciar as feiras livres via api. Aonde quem irá consumir esse sistema poderá buscar uma feira livre pelo os campos (distrito, regiao5, nome_feira, bairro) e também será possível editar, remover e criar.
 
+O banco da aplicação segue a mesma nomenclatura da planilha, com o nome da tabela e os campo em português. Visando que a aplicação continue falando na mesma linguagem do sistema que fez a geração da planilha.
+
 ### Tecnologias utilizadas
 
 Para essa aplicação usamos as seguintes tecnologias:
@@ -20,7 +22,7 @@ Esse projeto utiliza o docker para preparar o ambiente de desenvolvimento, por i
 
 ### Rodar o projeto localmente
 
-Com ambas as dependências mencionadas já instaladas, basta rodar o comando `docker-compose build` para que as dependências do projeto sejam instaladas e o ambiente seja montado. Esse procedimento só precisa ser feito na primeira vez que o projeto é clonado do repositório ou quando outro desenvolvedor incluiu uma nova dependência que ainda não foi instalada no seu ambiente virtual do Docker.
+Com ambas as dependências mencionadas já instaladas, basta rodar o comando `docker-compose build server` para que as dependências do projeto sejam instaladas e o ambiente seja montado. Esse procedimento só precisa ser feito na primeira vez que o projeto é clonado do repositório ou quando outro desenvolvedor incluiu uma nova dependência que ainda não foi instalada no seu ambiente virtual do Docker.
 
 Finalizado o processo de build, basta rodar o comando `docker-compose up server` todas as vezes que precisar rodar o projeto localmente.
 
@@ -32,24 +34,36 @@ Para rodar o import do csv basta fazer o passo anterior e rodar o seguinte coman
 
 ### Para rodar os testes
 
-Temos 2 formas no qual podemos rodar os testes, foi implementado uma action no github no qual rodamos os testes e mostramos o coverage [link dos builds dos tests](https://github.com/ramonPimentel/street_marketing/actions).
+Temos 2 formas no qual podemos rodar os testes:
 
-Para rodar localmente basta executar o seguinte comendo `docker-compose run server bash -c "make coverage"`, no qual rodamos os testes e geramos o coverage no arquivo `coverage.xml` e também um output no terminal.
+- Github Action
+Foi implementado uma action no github no qual rodamos os testes e mostramos o coverage [link dos builds dos tests](https://github.com/ramonPimentel/street_marketing/actions).
+
+- Rodar localmente:
+Com ambas as dependências mencionadas já instaladas, basta rodar o comando `docker-compose build test` para que as dependências do projeto sejam instaladas e o ambiente seja montado. Esse procedimento só precisa ser feito na primeira vez que o projeto é clonado do repositório ou quando outro desenvolvedor incluiu uma nova dependência que ainda não foi instalada no seu ambiente virtual do Docker.
+
+Finalizado o processo de build, basta rodar o comando `docker-compose up test` todas as vezes que precisar rodar os testes.
+
+No qual rodamos os testes e geramos o coverage no arquivo `coverage.xml` e também um output no terminal.
 
 ```
-Name                                           Stmts   Miss  Cover   Missing
-----------------------------------------------------------------------------
-app/exceptions/aplication_exception.py            15      1    93%   34
-app/models/street_marketing_model.py              29      2    93%   29-30
-app/repositories/base_repository.py               14      0   100%
-app/repositories/street_market_repository.py      25      3    88%   25, 40-52
-app/use_cases/create_street_marketing.py          19      0   100%
-app/use_cases/delete_street_marketing.py          19      0   100%
-app/use_cases/search_street_marketing.py          25     25     0%   1-40
-app/use_cases/update_sreet_marketing.py           20      0   100%
-app/utils/logger.py                               13      0   100%
-----------------------------------------------------------------------------
-TOTAL                                            179     31    83%
+Name                                                Stmts   Miss  Cover   Missing
+---------------------------------------------------------------------------------
+app/models/street_marketing_model.py                   27      0   100%
+app/repositories/base_repository.py                    18      0   100%
+app/repositories/street_market_repository.py           18      0   100%
+app/routes/street_marketing_router.py                  51      0   100%
+app/schemas/update_street_marketing_schema.py          25      0   100%
+app/use_cases/create_street_marketing.py               19      0   100%
+app/use_cases/delete_street_marketing.py               19      0   100%
+app/use_cases/find_street_marketing.py                 14      0   100%
+app/use_cases/import_street_marketing_from_csv.py      35      0   100%
+app/use_cases/search_street_marketing.py               25      0   100%
+app/use_cases/update_sreet_marketing.py                21      0   100%
+app/utils/logger.py                                    12      0   100%
+---------------------------------------------------------------------------------
+TOTAL                                                 284      0   100%
+Coverage XML written to file coverage.xml
 ```
 
 ### Documentação

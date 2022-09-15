@@ -14,6 +14,21 @@ services:
       - "9000:9000"
     volumes:
       - ./:/src/
+  
+  test:
+    build:
+      context: ./
+    environment:
+      - ENVIRONMENT:test
+      - DATABASE_DB=mongodb://mongo:27017/feira_livres_teste
+    depends_on:
+      - mongo
+    restart: always
+    command: bash ./scripts/run_test.sh
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./:/src/
 
   mongo:
     image: mongo:4.2.7-bionic

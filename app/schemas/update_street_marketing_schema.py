@@ -23,8 +23,5 @@ class UpdateStreetMarketingSchema(BaseModel):
   def remove_empty(cls, values):
     fields = list(values.keys())
     for field in fields:
-        value = values[field]
-        if isinstance(value, dict) or isinstance(value, list):
-            if not values[field]:
-                values.pop(field)
+      value = values[field]
     return values

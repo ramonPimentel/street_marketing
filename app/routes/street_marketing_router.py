@@ -64,10 +64,6 @@ async def create(street_marketing: StreetMarketing):
   except ApplicationException as err:
     return JSONResponse(status_code=err.app_error_code, content={"message": f"{err.description}"})
 
-class Item(BaseModel):
-  codigo: Union[str, None] = None
-  nome_feira: Union[str, None] = None
-
 @api.put("/feira_livres/{registro}", response_model=StreetMarketing)
 async def update(registro: str, item: UpdateStreetMarketingSchema):
   try:

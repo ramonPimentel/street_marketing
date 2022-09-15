@@ -4,7 +4,9 @@ omit =
     */migrations/*
     app/models/fields.py
     **/**/__init__.py
-    app/configs/mongo.py
+    app/configs/*
+    app/commands/*
+    app/exceptions/*
 
 [report]
 exclude_lines = 

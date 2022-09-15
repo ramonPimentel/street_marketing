@@ -17,3 +17,6 @@ class BaseRepository:
 
   def delete_all(self):
     return self.collection.delete_many({})
+
+  def find_all(self):
+    return list(self.collection.find({}))

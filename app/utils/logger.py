@@ -1,5 +1,7 @@
 import logging
 
+from app.configs.settings import settings
+
 
 
 class Logger():
@@ -10,10 +12,11 @@ class Logger():
   def setupLog (self, name) :
     log = logging.getLogger(name)
 
-    logging.basicConfig(
-      filename='logger.txt',
-      format='%(name)s - %(levelname)s - %(message)s'
-    )
+    if settings.environment != 'test':
+      logging.basicConfig(
+        filename='logger.txt',
+        format='%(name)s - %(levelname)s - %(message)s'
+      )
 
     log.setLevel(logging.DEBUG)
 
